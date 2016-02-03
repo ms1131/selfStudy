@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript課題</title>
+</head>
+<body>
+	<script>
+		alert("ようこそ！");
+
+		alert(3+7);
+
+		alert("ようこそ！ \nJavaScript ワールドへ");
+
+		document.write("JavaScriptはONです！<br>");
+
+		document.write("<b>10+20+</b>の答えは");
+		document.write(10+20);
+		document.write("です！<br>");
+
+		var kazu1=10;
+		var kazu2=5;
+		alert(kazu1+kazu2);
+		alert(kazu1-kazu2);
+		alert(kazu1*kazu2);
+		alert(kazu1/kazu2);
+
+		var aisatu="こんにちは！<br>";
+		var namae="山田太郎です。";
+		document.write(aisatu+namae+"<br>");
+
+		var feb=2;
+		var moji="月は英語でFebruaryです！";
+		alert(feb+moji);
+
+		var n;
+		n=1;
+		document.write(n+"<br>");
+		n=n+2;
+		document.write(n+"<br>");
+		n++;
+		document.write(n+"<br>");
+
+		const TEISU=1;
+		document.write(TEISU+"<br>");
+		//TEISU=2;
+		//document.write(TEISU);
+
+	</script>
+
+	<noscript>JavaScriptはOFFです！</noscript>
+
+	<script>
+		function aisatu(){
+			alert("おはよう");
+			alert("こんにちは");
+			alert("こんばんは");
+		}
+
+	</script>
+
+	<form>
+		<input type="button" value="ボタン1" onclick="aisatu()"><br>
+		<input type="button" value="ボタン2" onclick="aisatu()">
+
+	</form>
+
+	<a href="JavaScript:aisatu()">クリック<br></a>
+
+	<script>
+		aisatu();
+
+		function jijyo(a){
+			return a*a;
+		}
+		document.write("3の2乗は"+jijyo(3)+"です。<br>");
+		document.write("5の2乗は"+jijyo(5)+"です。<br>");
+
+		function menseki(tate, yoko){
+			return "面積は"+tate*yoko+"m<sup>2</sup>です。<br>";
+		}
+		document.write(menseki(10, 20));
+
+		var n=10;
+		if(n>5){
+			alert("5より大きいです！");
+		}
+
+		var n=5;
+		if(n<3){
+			alert("3より小さいです！");
+		}
+		else{
+			alert("3以上です！");
+		}
+
+		var n=5;
+		if(n==3){
+			alert("nは3です！");
+		}
+		else{
+			if(n==4){
+				alert("nは4です！");
+			}
+			else{
+				alert("nは3,4ではありません！");
+			}
+		}
+
+		var today=new Date();
+		var week=today.getDay();
+
+		switch(week){
+			case 0: document.write("今日は日曜日です！");
+			break;
+			case 1: document.write("今日は月曜日です！");
+			break;
+			case 2: document.write("今日は火曜日です！");
+			break;
+			case 3: document.write("今日は水曜日です！");
+			break;
+			case 4: document.write("今日は木曜日です！");
+			break;
+			case 5: document.write("今日は金曜日です！");
+			break;
+			default: document.write("今日は土曜日です！");
+			break;
+		}
+
+		var yobi=new Array();
+		yobi[0]="日曜日";
+		yobi[1]="月曜日";
+		yobi[2]="火曜日";
+		yobi[3]="水曜日";
+		yobi[4]="木曜日";
+		yobi[5]="金曜日";
+		yobi[6]="土曜日";
+
+		var today=new Date();
+		var week=today.getDay();
+		document.write("<br>今日は"+yobi[week]+"です！");
+
+		var yobi=new Array("日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日");
+		var today=new Date();
+		var week=today.getDay();
+		document.write("<br>今日は"+yobi[week]+"です！");
+
+		for(var i=1; i<=10; i++){
+			document.write("繰り返し文です。<br>");
+		}
+
+		var rank=1;
+		var mnt=new Array("富士山", "白根山","奥穂高岳", "間ノ岳", "槍ヶ岳");
+		document.write('<table border="3">');
+		for(var i=0; i<=4; i++){
+			document.write('<tr>');
+			document.write('<td>'+rank+'位</td>');
+			document.write('<td>'+mnt[i]+'</td>');
+			document.write('</tr>');
+			rank++;
+		}
+		document.write("</table>");
+
+		for(var i=1; i<=10; i++){
+			if(i==3) continue;
+			if(i==7) break;
+			document.write(i+"回目の繰り返しです！<br>");
+		}
+
+	</script>
+
+</body>
+</html>
